@@ -19,3 +19,4 @@ MonoBehaviour:
   - item: {fileID: 11400000, guid: bc2e7eee9cf28f24aa74c3da8c069b5a, type: 2}
     amount: 1
   outputQuantity: 1
+  score: 2

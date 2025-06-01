@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CrafterManager : MonoBehaviour
+public class CrafterManager : InstanceManager
 {
     public static CrafterManager Instance { get; private set; }
     public Transform idleSpot;

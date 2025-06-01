@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-// Structure pour décrire une quantité d'item (ressource ou produit)
+// Structure pour dÃ©crire une quantitÃ© d'item (ressource ou produit)
 [System.Serializable]
 public struct ItemAmount
 {
-    public ItemDefinition item;  // Référence à un ItemDefinition (ResourceDefinition ou ProductDefinition)
-    public int amount; // Quantité requise
+    public ItemDefinition item;  // RÃ©fÃ©rence Ã  un ItemDefinition (ResourceDefinition ou ProductDefinition)
+    public int amount; // QuantitÃ© requise
 }
 
 
@@ -16,10 +16,13 @@ public class ProductDefinition : ItemDefinition
     [Header("Temps de production")]
     public float craftingTime = 1f;            // Temps de fabrication en secondes
 
-    [Header("Ingrédients requis")]
-    public List<ItemAmount> ingredients;      // Liste d'items nécessaires
+    [Header("IngrÃ©dients requis")]
+    public List<ItemAmount> ingredients;      // Liste d'items nÃ©cessaires
 
-    [Header("Quantité produite")]
-    public int outputQuantity = 1;            // Nombre d'unités produites
-    // Tu peux ajouter d'autres champs (coût énergétique, catégorie, icône, etc.)
+    [Header("QuantitÃ© produite")]
+    public int outputQuantity = 1;            // Nombre d'unitÃ©s produites
+
+    [Header("Score Ã  la vente")]
+    public int score;
+
 }

@@ -23,7 +23,7 @@ public class ResourceManager : MonoBehaviour
 
     private void Start()
     {
-        activeProducts = products;//.Take(3).ToList();
+        activeProducts = products.Take(2).ToList();
     }
 
     public (ProductDefinition product, int quantity) GetProduct()

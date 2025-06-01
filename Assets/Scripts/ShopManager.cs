@@ -49,7 +49,8 @@ public class ShopManager : MonoBehaviour
 
     public Spot GetAndReserve(Client client)
     {
-        var d = spots.Select(s => s.reserved ? float.MaxValue : Vector3.Distance(s.clientSpot, client.gameObject.transform.position)).ToList();
+        //var d = spots.Select(s => s.reserved ? float.MaxValue : Vector3.Distance(s.clientSpot, client.gameObject.transform.position)).ToList();
+        var d = spots.Select(s => s.reserved ? float.MaxValue : Vector3.Distance(s.clientSpot, StorageManager.Instance.GetCraftingStorage())).ToList();
         var idx = d.FindIndex(s => s == d.Min());
         if (idx == -1)
         {

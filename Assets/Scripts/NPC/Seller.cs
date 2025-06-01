@@ -31,6 +31,7 @@ public class Seller : MonoBehaviour
                 yield return agent.MoveTo(order.spot.crafterSpot);
                 OrderManager.Instance.ValidOrder();
                 order.spot.client.OnDelivery();
+                ScoreManager.Instance.Add(order.product.score);
                 icon.Hide();
                 continue;
             }

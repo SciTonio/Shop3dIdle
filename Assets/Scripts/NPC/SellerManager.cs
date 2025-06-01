@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SellerManager : MonoBehaviour
+public class SellerManager : InstanceManager
 {
     public static SellerManager Instance { get; private set; }
     public Transform idleSpot;

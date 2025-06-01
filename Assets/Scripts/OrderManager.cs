@@ -29,8 +29,16 @@ public class OrderManager : MonoBehaviour
         for (int i = 0; i < order.quantity; i++)
         {
             orderQueue.Enqueue((spot, order.product));
-            AddProduction(order.product);
-            productionQueue.Enqueue(order.product);
+            if (StorageManager.Instance.HasCrafting(order.product))
+            {
+                Debug.Log($"Destock {order.product.itemName}");
+                StorageManager.Instance.RemoveCrafting(order.product);
+            }
+            else
+            {
+                AddProduction(order.product);
+                productionQueue.Enqueue(order.product);
+            }
         }
 
         OnOrder?.Invoke(orderQueue.Select(o => o.product).ToList());

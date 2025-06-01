@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Iron
   image: {fileID: 21300000, guid: cbaac504da577c042b06c4702d8fd23b, type: 3}
-  Duration: 3
+  Duration: 2

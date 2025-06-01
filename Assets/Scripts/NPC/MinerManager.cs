@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MinerManager : MonoBehaviour
+public class MinerManager : InstanceManager
 {
     public static MinerManager Instance { get; private set; }
     public Transform idleSpot;

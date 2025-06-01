@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TransporterManager : MonoBehaviour
+public class TransporterManager : InstanceManager
 {
     public static TransporterManager Instance { get; private set; }
     public Transform idleSpot;
